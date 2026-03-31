@@ -1,0 +1,38 @@
+{
+  "name": "mine-game-backend",
+  "version": "1.0.0",
+  "author": "webgently",
+  "description": "The server for the mine game frontend",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/app.ts",
+    "build": "esbuild src/app.ts --platform=node --bundle --minify --outfile=./dist/app.js ",
+    "dev": "ts-node -r tsconfig-paths/register ./src/app.ts",
+    "prettier": "npx prettier --write ."
+  },
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongodb": "^6.12.0",
+    "nodemon": "^3.1.9",
+    "random-seed": "^0.3.0",
+    "socket.io": "^4.8.1",
+    "uniqid": "^5.4.0"
+  },
+  "devDependencies": {
+    "@types/uniqid": "^5.3.4",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.5",
+    "esbuild": "^0.24.2",
+    "prettier": "^3.4.2",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.7.2"
+  }
+}

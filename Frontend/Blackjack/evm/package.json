@@ -1,0 +1,52 @@
+{
+  "name": "blackjack-evm",
+  "version": "1.0.0",
+  "description": "EVM-based Blackjack game smart contracts",
+  "main": "index.js",
+  "author": "Carlos Cosming",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "deploy:local": "npx hardhat run --network localhost scripts/deploy.ts",
+    "deploy:testnet": "npx hardhat run --network testnet scripts/deploy.ts",
+    "deploy:mainnet": "npx hardhat run --network mainnet scripts/deploy.ts",
+    "localnode": "npx hardhat node",
+    "clean": "npx hardhat clean",
+    "test": "npx hardhat test",
+    "compile": "npx hardhat compile --force",
+    "coverage": "npx hardhat coverage",
+    "lint": "solhint 'contracts/**/*.sol'",
+    "lint:fix": "solhint 'contracts/**/*.sol' --fix",
+    "format": "prettier --write 'contracts/**/*.sol'",
+    "full-test": "yarn clean && yarn compile && yarn test && yarn coverage"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.8",
+    "@nomicfoundation/hardhat-ethers": "^3.0.8",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.12",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.12",
+    "@openzeppelin/contracts": "^5.1.0",
+    "@openzeppelin/contracts-upgradeable": "^5.1.0",
+    "@openzeppelin/hardhat-upgrades": "^3.9.0",
+    "@typechain/ethers-v6": "^0.5.1",
+    "@typechain/hardhat": "^9.1.0",
+    "@types/chai": "^4.3.20",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.10.5",
+    "chai": "^4.5.0",
+    "ethers": "^6.13.5",
+    "hardhat": "^2.22.17",
+    "hardhat-gas-reporter": "^1.0.10",
+    "prettier": "^3.4.2",
+    "prettier-plugin-solidity": "^1.4.1",
+    "solhint": "^5.0.3",
+    "solidity-coverage": "^0.8.14",
+    "ts-node": "^10.9.2",
+    "typechain": "^8.3.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
